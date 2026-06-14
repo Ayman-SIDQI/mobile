@@ -1,10 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+
+function clickHandler() {
+  console.log("Button pressed");
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Hello, my boy!</Text>
+      <Button title="Click me!"
+      onPress={clickHandler}
+      accessibilityLabel="I said click me don't hesitate"
+      color="#841584" />
       <StatusBar style="auto" />
     </View>
   );
